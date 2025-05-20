@@ -16,7 +16,7 @@
         <div class="card-body">
           <h5 class="card-title" th:text="${libro.titulo}">Card title</h5>
           <p th:text="${libro.autor}"></p>
-          <p class="card-text">Novela de romance juvenil, que cuenta la historia de dos adolescentes, Luke y Hasley, quienes se unen en un amor complicado y poco convencional.</p>
+          <p th:text="${libro.editorial}" class="card-text"></p>
           <a href="#" class="btn btn-primary">Ver</a>
         </div>
       </div>

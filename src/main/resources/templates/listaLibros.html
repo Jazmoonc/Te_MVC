@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="index :: head"></head>
+<body class="d-flex flex-column min-vh-100">
+<nav th:replace="index :: navbar"></nav>
+
+<main class="container my-4">
+    <h1>Lista de Libros</h1>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Título</th>
+            <th>Autor</th>
+            <th>Editorial</th>
+            <th>Páginas</th>
+            <th>Imagen</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="libro : ${libros}">
+            <td th:text="${libro.titulo}"></td>
+            <td th:text="${libro.autor}"></td>
+            <td th:text="${libro.editorial}"></td>
+            <td th:text="${libro.paginas}"></td>
+            <td>
+                <img th:src="${libro.imagen}" alt="Portada" width="80">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</main>
+
+<footer th:replace="index :: footer"></footer>
+<div th:replace="index :: jsincludes"></div>
+</body>
+</html>

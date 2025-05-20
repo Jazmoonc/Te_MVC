@@ -1,13 +1,21 @@
 package mx.unam.aragon.ico.te.librosmvc.modelos;
 
+import jakarta.persistence.*;
+
 import java.util.Objects;
 
+@Entity
+@Table(name = "libro")
 public class Libro {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private String titulo;
     private String autor;
     private String editorial;
     private String imagen;
-    private int paginas;
+    private Integer paginas;
 
     public Libro() {
     }
